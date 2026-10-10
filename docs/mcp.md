@@ -22,6 +22,10 @@ Open **Settings → Connect apps**.
 
 **Cursor**, **Claude Desktop**, and **VS Code** have a Connect button. It writes the config on this machine.
 
+Step-by-step client guides:
+
+- [Claude Desktop](mcp-clients/claude-desktop.md) — config location, restart, verifying the tools appear
+
 ### Copy JSON (any other MCP app)
 
 **Copy JSON** copies a config built from this computer's Python path and data folder. Paste that into any other MCP app. It is not a config from the developer's machine.

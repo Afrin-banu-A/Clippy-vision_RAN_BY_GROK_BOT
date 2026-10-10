@@ -73,7 +73,7 @@ The setup wizard checks these numbers before installing. Below minimum → setup
 3. Leave Clippy running to build your activity history.
 4. Open **Settings → Connect apps**, connect your agent, and ask about your activity.
 
-More detail: [docs/usage.md](docs/usage.md) · [docs/mcp.md](docs/mcp.md)  
+More detail: [docs/usage.md](docs/usage.md) · [docs/mcp.md](docs/mcp.md) · client guide: [Claude Desktop](docs/mcp-clients/claude-desktop.md)  
 Build from source: [CONTRIBUTING.md](CONTRIBUTING.md#building-from-source)
 
 ---
@@ -111,6 +111,7 @@ Full guide (retention defaults and detailed behavior): [docs/usage.md](docs/usag
 |-------|----------|
 | [docs/usage.md](docs/usage.md) | Capture controls, privacy, accessibility, install troubleshooting |
 | [docs/mcp.md](docs/mcp.md) | Supported clients, Copy JSON, tool reference, access permissions |
+| [docs/mcp-clients/claude-desktop.md](docs/mcp-clients/claude-desktop.md) | Step-by-step Claude Desktop setup: config location, restart, verification |
 | [docs/architecture.md](docs/architecture.md) | Tech stack, capture pipeline, summarization, distillation, schema |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Build from source and contribution guide |
 | [PROJECT_VISION.md](PROJECT_VISION.md) | Roadmap, principles, and known limitations |
