@@ -15,7 +15,7 @@ For general setup information, see the [LM Studio MCP documentation](https://lms
 
 1. Open Clippy Vision.
 2. Go to **Settings → Connect apps**.
-3. Copy the configuration provided for MCP clients.
+3. Click the **Copy JSON** button to copy the configuration for MCP clients.
 4. Keep the generated command, arguments, and paths unchanged.
 
 The configuration is generated for your computer. Do not copy another user's paths, because they may be different on your system.
@@ -25,12 +25,37 @@ The configuration is generated for your computer. Do not copy another user's pat
 1. Open LM Studio.
 2. In the right sidebar, open **Program**.
 3. Select **Install → Edit mcp.json**.
-4. Add the Clippy Vision configuration you copied under `mcpServers`.
+4. Add the Clippy Vision configuration under `mcpServers`, following the appropriate method below.
 5. Save the file and check whether Clippy Vision connects.
 
-If `mcp.json` already contains other MCP servers, preserve their entries and add Clippy Vision as another entry inside `mcpServers`. Do not replace the existing configuration.
+### If `mcp.json` is empty
+
+Paste the entire JSON configuration copied using the **Copy JSON** button into `mcp.json`, then save the file.
+
+### If `mcp.json` already contains other MCP servers
+
+Keep the existing server entries. Copy only the Clippy Vision entry from the copied JSON and add it inside the existing `mcpServers` object. Do not replace the entire file or create a second `mcpServers` object.
+
+For example, the structure should look like this:
+
+```json
+{
+  "mcpServers": {
+    "other-server": {
+      "...": "existing configuration"
+    },
+    "clippy-vision": {
+      "...": "actual Clippy Vision configuration goes here"
+    }
+  }
+}
+```
+
+This is only a structural example. Use the actual server name and configuration copied from Clippy Vision. If you add an entry after an existing server, separate the entries with a comma.
 
 For additional details, see [Use MCP Servers in LM Studio](https://lmstudio.ai/docs/app/mcp).
+
+
 
 ## 3. Choose a local model
 
@@ -49,6 +74,10 @@ Ensure Clippy Vision has been running long enough to record some activity. Then 
 > What was I working on in the last hour?
 
 A good answer should summarize relevant activity found in the recorded history, such as applications or tasks, based on the information available to the tools.
+
+For a question about recent activity, the model should use `list_sessions_tool` or `search_sessions_tool` to retrieve relevant session information. If no matching results are found, `activity_coverage_tool` can help indicate whether activity capture was running during the requested period.
+
+See the [MCP tool reference](../mcp.md) for details about these tools.
 
 The model should not invent events if no matching activity is available. Confirm that it actually calls a Clippy Vision tool and uses the returned result. A plausible answer without a tool call does not prove that the integration works.
 
