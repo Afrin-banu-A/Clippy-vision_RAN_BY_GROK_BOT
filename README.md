@@ -75,7 +75,7 @@ The setup wizard checks these numbers before installing. Below minimum → setup
 3. Leave Clippy running to build your activity history.
 4. Open **Settings → Connect apps**, connect your agent, and ask about your activity.
 
-More detail: [docs/usage.md](docs/usage.md) · [docs/mcp.md](docs/mcp.md) · client guides: [Claude Desktop](docs/mcp-clients/claude-desktop.md) · [LM Studio](docs/mcp-clients/lm-studio.md) 
+More detail: [docs/usage.md](docs/usage.md) · [docs/mcp.md](docs/mcp.md) · client guides: [Claude Desktop](docs/mcp-clients/claude-desktop.md) · [LM Studio](docs/mcp-clients/lm-studio.md)  
 Build from source: [CONTRIBUTING.md](CONTRIBUTING.md#building-from-source)
 
 ---
