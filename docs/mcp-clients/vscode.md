@@ -31,6 +31,7 @@ Standard configuration paths:
 
 - **Windows:** `%APPDATA%\Code\User\mcp.json`
 - **macOS:** `~/Library/Application Support/Code/User/mcp.json`
+- **Linux:** `~/.config/Code/User/mcp.json`
 
 For custom profiles or other configuration locations, consult the [official VS Code MCP documentation](https://code.visualstudio.com/docs/copilot/chat/mcp-servers).
 
