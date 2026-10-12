@@ -44,6 +44,23 @@ For custom profiles or other configuration locations, consult the [official VS C
 3. Keep existing servers and add Clippy Vision inside the existing `servers` object if one is already present.
 4. Save the file.
 
+Example of the finished VS Code `mcp.json`:
+
+```json
+{
+  "servers": {
+    "clippy-vision": {
+      "type": "stdio",
+      "command": "YOUR_COMMAND",
+      "args": [],
+      "env": {}
+    }
+  }
+}
+```
+
+Replace the placeholders with the actual values from **Copy JSON**, preserving any required arguments and environment variables.
+
 Use the actual configuration values from **Copy JSON**; do not guess paths or commands.
 
 ### 4. Check the server and tools
@@ -66,7 +83,7 @@ In Copilot Chat Agent mode, ask:
 
 For the first question, check whether Copilot calls `list_sessions_tool` or `search_sessions_tool`. A good answer summarizes activity returned by the tool for the requested period.
 
-If no activity is returned, use `activity_coverage_tool` to check whether capture was enabled and whether the requested time range is covered. An empty result alone does not prove the connection is broken.
+To check capture coverage, ask Copilot: **“Was Clippy Vision capturing during the last hour?”** Copilot should call `activity_coverage_tool`, which helps distinguish between “nothing happened” and “capture was off” for the requested time range. An empty activity result alone does not prove the connection is broken.
 
 **Verification status:** Not verified yet.
 
